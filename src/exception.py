@@ -1,5 +1,5 @@
 import sys  # track error details
-from logger import logging
+from src.logger import logging
 
 
 def error_message_detail(error, error_detail: sys):
@@ -20,9 +20,9 @@ class CustomException(Exception):
         return self.error_message
 
 # Checking with an example : 
-
+"""
 if __name__ == "__main__":
-    """
+    
     def divide_numbers(a, b):
         try:
             result = a / b
@@ -30,7 +30,7 @@ if __name__ == "__main__":
             # Raise a CustomException instead of the original exception
             raise CustomException(e, sys) 
 
-    divide_numbers(10, 0)"""
+    divide_numbers(10, 0)
   
     try:
         a = 13 / 0
@@ -38,3 +38,5 @@ if __name__ == "__main__":
     except Exception as e:
         
         raise CustomException(e, sys)
+
+        """
